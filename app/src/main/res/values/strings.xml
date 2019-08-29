@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Kbm Online</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="token_mapbox">pk.eyJ1IjoiZGF5YTIzIiwiYSI6ImNqenR0Y2hkMjAwc2IzanFvYnUxbHI3YmcifQ.tOGoTRF0SHYDXU-Y0nPI7A</string>
+</resources>
