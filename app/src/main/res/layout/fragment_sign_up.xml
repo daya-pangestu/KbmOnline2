@@ -4,8 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
-        tools:context=".view.LoginFragment">
+        tools:context=".SignUpFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:orientation="vertical"
@@ -17,70 +16,86 @@
 
         <ImageView android:src="@drawable/logo_kbm"
                 android:layout_width="wrap_content"
-                android:id="@+id/fLoginImg"
                 android:layout_height="72dp"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginBottom="24dp"
+                android:id="@+id/fsignUpImg"
                 android:layout_gravity="center_horizontal" />
 
+        <!--  Name Label -->
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/fLoginImg"
-                android:id="@+id/fLoginTILUsr"
+                android:id="@+id/fsngUPTILname"
+                app:layout_constraintTop_toBottomOf="@id/fsignUpImg"
                 android:layout_marginBottom="8dp">
             <EditText
-                    android:id="@+id/fLoginEdtUser"
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:hint="Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email Label -->
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fsignUPTILemail"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/fsngUPTILname"
+                android:layout_marginBottom="8dp">
+            <EditText
+                    android:id="@+id/input_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:hint="Email" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Password Label -->
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/fLoginTILUsr"
-
-                android:id="@+id/fLoginTILPass"
+                app:layout_constraintTop_toBottomOf="@id/fsignUPTILemail"
+                android:id="@+id/fsingUpTILpass"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp">
             <EditText
-                    android:id="@+id/fLoginEdtPassword"
+                    android:id="@+id/input_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:hint="Password"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Signup Button -->
         <Button
+                android:id="@+id/btn_signup"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                app:layout_constraintTop_toBottomOf="@id/fLoginTILPass"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:id="@+id/fLoginBtnLogin"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginBottom="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fsingUpTILpass"
                 android:padding="12dp"
-                android:text="Login"/>
+                android:text="Create Account"/>
 
         <TextView
-                android:id="@+id/fLoginBtnSignUp"
+                android:id="@+id/link_login"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:text="No account yet? Create one"
-                app:layout_constraintTop_toBottomOf="@id/fLoginBtnLogin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_signup"
+                android:text="Already a member? Login"
                 android:gravity="center"
                 android:textSize="16dip"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </ScrollView>
