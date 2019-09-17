@@ -1,31 +1,26 @@
 package com.appm.kbmonline.viewmodel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.mapbox.api.geocoding.v5.models.CarmenFeature
 
-class MapViewModel() : ViewModel() {
-    val originLiveData  = MutableLiveData<Boolean>()
-    val dstinationLiveData = MutableLiveData<Boolean>()
-
-    val twoPointLiveData = MutableLiveData<Boolean>()
+class MapViewModel : ViewModel() {
+    private val carmenFeatureOrigin = MutableLiveData<CarmenFeature>()
+    private val carmenFeatureDestination = MutableLiveData<CarmenFeature>()
 
 
-    fun setOrigin(pointExist : Boolean) {
-      originLiveData.value = pointExist
+    fun setCarmenFeatureOrigin(feature: CarmenFeature){
+        carmenFeatureOrigin.value = feature
     }
 
-    fun setDestination(pointExist : Boolean){
-        dstinationLiveData.value = pointExist
+    fun getCarmenFeatureOrigin() = carmenFeatureOrigin
+
+
+    fun setCarmenFeatureDestination(feature: CarmenFeature){
+        carmenFeatureDestination.value = feature
     }
 
-    fun isSearchCompleted() : LiveData<Boolean>{
-        return if (originLiveData.value == true && dstinationLiveData.value == true) {
-            twoPointLiveData.value = true
-            twoPointLiveData
-        } else {
-            twoPointLiveData.value = false
-            twoPointLiveData
-        }
-    }
+    fun getCarmenFeatureDestination() = carmenFeatureDestination
+
+
 }

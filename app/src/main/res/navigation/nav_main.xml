@@ -2,8 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_main"
-            app:startDestination="@id/mapFragment">
+            app:startDestination="@id/loginFragment">
 
     <fragment android:id="@+id/mapFragment" android:name="com.appm.kbmonline.view.MapFragment" android:label="fragment_map"
               tools:layout="@layout/fragment_map"/>
+    <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.appm.kbmonline.view.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login" />
 </navigation>

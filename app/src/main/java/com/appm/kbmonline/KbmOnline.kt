@@ -10,6 +10,7 @@ class KbmOnline : Application() {
         super.onCreate()
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
+
         }
 
         Mapbox.getInstance(applicationContext, getString(R.string.token_mapbox))
