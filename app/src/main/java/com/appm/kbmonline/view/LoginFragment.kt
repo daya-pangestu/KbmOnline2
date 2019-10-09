@@ -6,21 +6,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_login.*
 import org.jetbrains.anko.AnkoLogger
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
-import com.appm.kbmonline.R
-import com.appm.kbmonline.viewmodel.UserAuthViewModel
-import org.jetbrains.anko.support.v4.toast
-import android.content.Context.INPUT_METHOD_SERVICE
-import android.view.inputmethod.InputMethodManager
 import androidx.navigation.Navigation
+import com.appm.kbmonline.R
+import com.appm.kbmonline.UserAuthViewModel
 import com.dx.dxloadingbutton.lib.AnimationType
-
+import com.mobile.authentification.util.AppUtils
+import org.jetbrains.anko.support.v4.toast
+import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment(), AnkoLogger {
-    lateinit var viewModel: UserAuthViewModel
+    private lateinit var viewModel: UserAuthViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,7 +33,7 @@ class LoginFragment : Fragment(), AnkoLogger {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        fLoginBtnLogin.setOnClickListener { view1 ->
+        fLoginBtnLogin.setOnClickListener { _ ->
             val email = fLoginEdtUser.text.toString()
             val pass = fLoginEdtPassword.text.toString()
 
@@ -56,22 +54,13 @@ class LoginFragment : Fragment(), AnkoLogger {
                         toast("${it.exception?.message}")
                     }
                 }
-
             } else {
                 Toast.makeText(view.context, "One of the field is empty", Toast.LENGTH_SHORT).show()
             }
-            try {
-                val imm = view.context.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?
-                imm!!.hideSoftInputFromWindow(view.windowToken, 0)
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
 
+            AppUtils.hideKeyboard(view)
         }
-
 
         fLoginToSignUp.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_signUpFragment))
     }
-
-
 }

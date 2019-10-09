@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+        applicationId "com.mobile.authentification"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation constraintlayout
+    implementation materialComponent
+    implementation firebase.auth
+
+    implementation mapbox.androidSdk
+    implementation mapbox.androidPluginMarkerView
+    implementation mapbox.androidPluginPlaces
+
+    implementation recyclerview
+    implementation cardview
+    implementation lifecycleExtensions
+
+    implementation anko
+
+    implementation dxLoadingButton
+
+    implementation navigation.navigationFragment
+    implementation navigation.navigationUi
+
+
+}

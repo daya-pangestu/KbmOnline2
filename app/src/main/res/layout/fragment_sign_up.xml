@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".SignUpFragment">
+        android:padding="16dp"
+        android:layout_height="match_parent"
+        tools:context="com.appm.kbmonline.SignUpFragment">
+
 
 
         <ImageView android:src="@drawable/logo_kbm"
@@ -54,19 +55,19 @@
                     android:hint="Password"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-    <com.dx.dxloadingbutton.lib.LoadingButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fsingUpTILpass"
-            app:lb_btnColor="@color/colorPrimary"
-            android:id="@+id/fsignUpBtnSignUp"
-            android:layout_marginBottom="24dp"
-            android:padding="12dp"
-            app:lb_btnText="SIGN UP"
-            />
+        <com.dx.dxloadingbutton.lib.LoadingButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fsingUpTILpass"
+                app:lb_btnColor="@color/colorPrimary"
+                android:id="@+id/fsignUpBtnSignUp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                app:lb_btnText="SIGN UP"
+                />
 
         <TextView
                 android:id="@+id/fsignUpToLogin"
@@ -80,5 +81,4 @@
                 android:gravity="center"
                 android:textSize="16dip"/>
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
