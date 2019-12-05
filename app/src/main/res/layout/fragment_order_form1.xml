@@ -1,11 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".OrderForm1Fragment">
+        android:padding="16dp"
+        tools:context=".view.order.OrderForm1Fragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:hint="Jenis Keperluan" />
+
+        <Spinner
+                android:id="@+id/f1_sp_item_keperluan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:entries="@array/item_keperluan"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="282dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Jenis Pemesanan"
+                tools:layout_editor_absoluteY="7dp" />
+
+        <Spinner
+                android:id="@+id/f1_sp_item_pemesanan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:entries="@array/item_pemesanan"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="27dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Keberangkatan"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textStyle="bold" />
 
 
-</FrameLayout>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Kawasan" />
+
+        <Spinner
+                android:id="@+id/f1_sp_item_kawasan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/item_kawasan"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="182dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Witel" />
+
+        <Spinner
+                android:id="@+id/f1_sp_item_witel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:entries="@array/item_witel"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="182dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Area Pool" />
+
+        <Spinner
+                android:id="@+id/f1_sp_item_pool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:entries="@array/item_pool"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="414dp" />
+
+        <TextView
+                android:layout_width="114dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Area Tujuan" />
+
+        <Spinner
+                android:id="@+id/f1_sp_item_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:entries="@array/item_area"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+    </LinearLayout>
+</ScrollView>

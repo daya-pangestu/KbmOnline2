@@ -35,6 +35,7 @@ dependencies {
     implementation firebase.auth
     implementation navigation.navigationUi
     implementation navigation.navigationFragment
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.42.1'
 
     implementation recyclerview
     implementation cardview
@@ -54,9 +55,10 @@ dependencies {
     implementation mapbox.androidPluginPlaces
 
     implementation anko
-
     implementation dxLoadingButton
 
+    implementation viewmodelScope
+    implementation livedata
 
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'

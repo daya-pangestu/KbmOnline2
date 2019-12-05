@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.dx.dxloadingbutton.lib.AnimationType
-import com.mobile.autentifikasi.R
 import com.mobile.authentification.util.AppUtils
 import kotlinx.android.synthetic.main.fragment_sign_up.*
 import org.jetbrains.anko.support.v4.toast
@@ -62,7 +61,12 @@ class SignUpFragment : Fragment() {
             }
             AppUtils.hideKeyboard(view)
         }
+
+        fsignUpToLogin.setOnClickListener {
+            Navigation.findNavController(it).navigateUp()
+        }
     }
+
 
     }
 

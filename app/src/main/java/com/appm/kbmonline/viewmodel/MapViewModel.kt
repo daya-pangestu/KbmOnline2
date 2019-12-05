@@ -3,7 +3,6 @@ package com.appm.kbmonline.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mapbox.api.geocoding.v5.models.CarmenFeature
-
 class MapViewModel : ViewModel() {
     private val carmenFeatureOrigin = MutableLiveData<CarmenFeature>()
     private val carmenFeatureDestination = MutableLiveData<CarmenFeature>()
@@ -22,5 +21,5 @@ class MapViewModel : ViewModel() {
 
     fun getCarmenFeatureDestination() = carmenFeatureDestination
 
-
 }
+

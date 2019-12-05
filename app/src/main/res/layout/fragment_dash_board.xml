@@ -7,13 +7,13 @@
         tools:context=".DashBoardFragment">
 
     <androidx.cardview.widget.CardView
-            android:id="@+id/cardAcc"
+            android:id="@+id/f_menu_card_acc"
             android:layout_width="98dp"
             android:layout_height="128dp"
             android:layout_marginTop="40dp"
             app:cardBackgroundColor="@color/colorAccent"
             app:layout_constraintBottom_toTopOf="@+id/card3"
-            app:layout_constraintEnd_toStartOf="@+id/card2"
+            app:layout_constraintEnd_toStartOf="@+id/f_menu_card_order"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -35,14 +35,14 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-            android:id="@+id/card2"
+            android:id="@+id/f_menu_card_order"
             android:layout_width="98dp"
             android:layout_height="128dp"
             app:cardBackgroundColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/cardAcc"
-            app:layout_constraintTop_toTopOf="@id/cardAcc"
+            app:layout_constraintStart_toEndOf="@+id/f_menu_card_acc"
+            app:layout_constraintTop_toTopOf="@id/f_menu_card_acc"
             tools:layout_editor_absoluteY="0dp" >
 
         <LinearLayout
@@ -70,7 +70,7 @@
             app:layout_constraintEnd_toStartOf="@+id/card4"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardAcc">
+            app:layout_constraintTop_toBottomOf="@+id/f_menu_card_acc">
 
         <LinearLayout
                 android:layout_width="match_parent"

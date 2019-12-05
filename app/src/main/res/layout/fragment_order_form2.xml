@@ -1,14 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".OrderForm2Fragment">
+        android:padding="16dp"
+        tools:context=".view.order.OrderForm2Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-</FrameLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Tujuan"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+        <Button
+                android:id="@+id/f2_btn_map_pesan"
+                android:layout_width="95dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="MAP"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="350dp" />
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Detail Alamat" />
+
+        <TextView
+                android:id="@+id/f2_tv_detailAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Detail Alamat"
+                android:inputType="none"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="464dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text=" waktu"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteY="7dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text=" waktu keberangkatan"
+                tools:layout_editor_absoluteY="7dp" />
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/f2_btn_datepickhari_berangkat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:datePickerMode="calendar"
+                    android:text="pilih hari" />
+
+            <TextView
+                    android:id="@+id/f2_tv_datepickhari_berangkat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="pilih hari" />
+
+            <Button
+                    android:id="@+id/f2_btn_datepickjam_berangkat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:datePickerMode="calendar"
+                    android:text="pilih jam" />
+
+            <TextView
+                    android:id="@+id/tvdatepickjam_berangkat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="pilih jam" />
+        </LinearLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text=" waktu kepulangan"
+                tools:layout_editor_absoluteY="7dp" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/f2_btn_datepickhari_tujuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:datePickerMode="calendar"
+                    android:text="pilih hari" />
+
+            <TextView
+                    android:id="@+id/f2_tv_datepickhari_tujuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="pilih hari" />
+
+            <Button
+                    android:id="@+id/f2_btn_datepickjam_tujuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:datePickerMode="calendar"
+                    android:text="pilih jam" />
+
+            <TextView
+                    android:id="@+id/f2_tv_datepickjam_tujuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="pilih jam" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

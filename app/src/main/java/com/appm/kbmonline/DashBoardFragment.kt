@@ -6,12 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_dash_board.*
 
-/**
- * A simple [Fragment] subclass.
- */
-class DashBoardFragment : Fragment() {
+class DashBoardFragment : Fragment(), View.OnClickListener {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,8 +22,21 @@ class DashBoardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val s = ViewModelProviders.of(this).get(UserAuthViewModel::class.java)
+        f_menu_card_order.setOnClickListener(this)
+        f_menu_card_acc.setOnClickListener(this)
     }
 
+
+    override fun onClick(view: View?) {
+        when (view?.id) {
+            R.id.f_menu_card_order -> {
+                Navigation.findNavController(view)
+                    .navigate(R.id.action_dashBoardFragment_to_orderFragment)
+            }
+            R.id.f_menu_card_acc -> {
+                Navigation.findNavController(view)
+                    .navigate(R.id.action_dashBoardFragment_to_accOrderFragment)
+            }
+        }
+    }
 }

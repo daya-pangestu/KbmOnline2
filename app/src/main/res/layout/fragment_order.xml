@@ -3,13 +3,23 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".OrderFragment">
-
+        tools:context=".view.order.OrderFragment">
 
     <androidx.viewpager.widget.ViewPager
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            
-            />
+            android:id="@+id/fOrderViewPager" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/f_order_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+
+            android:src="@drawable/ic_arrow_forward_black_24dp" />
 
 </FrameLayout>
+
+

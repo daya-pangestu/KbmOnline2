@@ -1,8 +1,54 @@
 <resources>
     <string name="app_name">Kbm Online</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="token_mapbox">pk.eyJ1IjoiZGF5YTIzIiwiYSI6ImNqenR0Y2hkMjAwc2IzanFvYnUxbHI3YmcifQ.tOGoTRF0SHYDXU-Y0nPI7A</string>
+
+    <string-array name="item_keperluan">
+        <item>Regular</item>
+        <item>Event</item>
+        <item>Sosial</item>
+        <item>CAM</item>
+        <item>Emergency</item>
+        <item>Penanganan Gangguan</item>
+        <item>Direksi</item>
+    </string-array>
+
+    <string-array name="item_pemesanan">
+        <item>Mobil</item>
+        <item>Mobil+Sopir</item>
+        <item>Sopir</item>
+    </string-array>
+
+    <string-array name="item_kawasan">
+        <item>JABAR-BANTEN</item>
+        <item>JABODETABEK</item>
+        <item>JATENG-DIY</item>
+        <item>JATIM-BALI-NUSRA</item>
+        <item>KALIMANTAN</item>
+        <item>PAMASULA</item>
+        <item>SUMATERA</item>
+    </string-array>
+    <string-array name="item_witel">
+        <item>jateng barut</item>
+        <item>jateng barsel</item>
+        <item>jateng utara</item>
+        <item>jateng tengah</item>
+        <item>jateng timur</item>
+        <item>jateng selatan</item>
+        <item>DI yogyakarta</item>
+    </string-array>
+    <string-array name="item_pool">
+        <item>SMG pahlawan</item>
+        <item>SMG johar</item>
+    </string-array>
+    <string-array name="item_area">
+        <item>JABAR-BANTEN</item>
+        <item>JABODETABEK</item>
+        <item>JATENG-DIY</item>
+        <item>JATIM-BALI-NUSRA</item>
+        <item>KALIMANTAN</item>
+        <item>PAMASULA</item>
+        <item>SUMATERA</item>
+    </string-array>
+
 </resources>
